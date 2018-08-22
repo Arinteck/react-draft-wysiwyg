@@ -18,16 +18,17 @@ export default class ModalHandler {
       });
     }
     if (document) {
-      document.addEventListener('click', () => { // eslint-disable-line no-undef
-        if (!this.editorFlag) {
-          this.closeAllModals();
-          if (this.suggestionCallback) {
-            this.suggestionCallback();
-          }
-        } else {
-          this.editorFlag = false;
-        }
-      });
+      // document.addEventListener('click', () => { // eslint-disable-line no-undef
+      //   console.log('closeAllModals')
+      //   if (!this.editorFlag) {
+      //     this.closeAllModals();
+      //     if (this.suggestionCallback) {
+      //       this.suggestionCallback();
+      //     }
+      //   } else {
+      //     this.editorFlag = false;
+      //   }
+      // });
       document.addEventListener('keydown', (event) => { // eslint-disable-line no-undef
         if (event.key === 'Escape') {
           this.closeAllModals();
